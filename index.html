@@ -23,11 +23,25 @@
                 <div class="background-row"></div>
 
                 <div class="row content-row">
-                    <div class="col-sm-2 hidden-sm"></div>
 
-                    <div class="col-sm-8">
-                        <h1>Vishnu Vijayan</h1>
+                    <div class="col-sm-12 col-lg-10">
+                        <h1 style="text-transform: uppercase;">Vishnu Vijayan</h1>
                         <h1>Web Developer | Software Engineer | Music Producer</h1>
+                        <p class="about-me">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a
+                            type specimen book.
+                        </p>
+
+                        <div class="row" style="padding-top: 10px;">
+                            <div class="col-xs-1 sm-hidden"></div>
+                            <div class="col-xs-2">
+                                <a class="btn btn-outline-black">Resume</a>
+                            </div>
+                            <div class="col-xs-2">
+                                <a class="btn btn-outline-black">GitHub</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
     	    </div>
@@ -55,7 +69,21 @@
     <!-- Custon javascript -->
     <script>
         $(document).ready(function() {
-            $('#fullpage').fullpage();
+            $('#fullpage').fullpage({
+                verticalCentered: true
+            });
+
+            $('.btn-6').on('mouseenter', function(e) {
+        		var parentOffset = $(this).offset(),
+          		relX = e.pageX - parentOffset.left,
+          		relY = e.pageY - parentOffset.top;
+        		$(this).find('span').css({top:relY, left:relX});
+            }).on('mouseout', function(e) {
+        		var parentOffset = $(this).offset(),
+          		relX = e.pageX - parentOffset.left,
+          		relY = e.pageY - parentOffset.top;
+            	$(this).find('span').css({top:relY, left:relX});
+            });
         });
     </script>
 </body>
