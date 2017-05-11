@@ -1,4 +1,12 @@
-html {
+*{
     margin: 0;
     height: 100%;
+}
+
+#section1 {
+    background-color: red;
+}
+
+#section2 {
+    background-color: blue;
 }
