@@ -66,23 +66,38 @@ a {
 }
 
 #section1-bg {
-    height: 300px;
+    margin-top: -10%;
     width: 89vw;
-    position: relative;
     display: inline-block;
+    position: relative;
     padding-bottom: 50%;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 #section1-bg svg, img, object {
     opacity: 0.15;
     right: 0;
-    bottom: 15%;
+    bottom: 0;
     display: block;
     position: absolute;
     height: 80%;
 }
 
 #section2 {
-    background-color: blue;
+    background-color: #00796B;
+}
+
+#section2 h1 {
+    color: #ecf0f1;
+    font-size: 4.5em;
+    padding-bottom: 2%;
+}
+
+.project-placeholder {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 7px;
+    margin-bottom: 5%;
 }
