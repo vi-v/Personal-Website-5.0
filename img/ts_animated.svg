@@ -32,7 +32,7 @@ C2970.14,2681.75,2987.48,2813.07,3049.89,2980.26
 C3179.76,3328.15,3449.17,3652.05,3838.12,3828.17
 L3822.29,3821
 C3651.29,3742.04,3434.2,3680.5,3175.47,3680.5
-C2786.82,3680.5,2488.31,3828.72,2304.77,3960.3Z" class="FxdqInub_0"></path>
+C2786.82,3680.5,2488.31,3828.72,2304.77,3960.3Z" class="FxdqInub_0 uTAPOIEH_0"></path>
 <path stroke-width="67.03125" stroke="rgb(0,0,0)" d="M1484.67,2627.9
 C1491.78,2627.65,1500.14,2629.62,1506.44,2632.92
 C1513.16,2636.44,1519.85,2642.62,1524.13,2648.88
@@ -441,6 +441,6 @@ C1445.64,2529.95,1440.01,2541.51,1437.31,2552.1
 C1434.94,2561.39,1434.17,2572.71,1435.65,2582.18
 C1436.95,2590.52,1440.45,2599.95,1445.21,2606.92
 C1449.49,2613.17,1456.19,2619.35,1462.9,2622.87
-C1469.2,2626.17,1477.56,2628.14,1484.67,2627.9Z" class="FxdqInub_1"></path>
+C1469.2,2626.17,1477.56,2628.14,1484.67,2627.9Z" class="FxdqInub_1 uTAPOIEH_1"></path>
 </g>
-<style>.FxdqInub_0{stroke-dasharray:28487 28489;stroke-dashoffset:28488;animation:FxdqInub_draw 8000ms ease-in-out 0ms forwards;}.FxdqInub_1{stroke-dasharray:82450 82452;stroke-dashoffset:82451;animation:FxdqInub_draw 8000ms ease-in-out 0ms forwards;}@keyframes FxdqInub_draw{100%{stroke-dashoffset:0;}}@keyframes FxdqInub_fade{0%{stroke-opacity:1;}96.72131147540983%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>
+<style>.FxdqInub_0{stroke-dasharray:28487 28489;stroke-dashoffset:28488;animation:FxdqInub_draw 8000ms ease-in-out 0ms forwards;}.FxdqInub_1{stroke-dasharray:82450 82452;stroke-dashoffset:82451;animation:FxdqInub_draw 8000ms ease-in-out 0ms forwards;}@keyframes FxdqInub_draw{100%{stroke-dashoffset:0;}}@keyframes FxdqInub_fade{0%{stroke-opacity:1;}96.72131147540983%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style><style>.uTAPOIEH_0{stroke-dasharray:28487 28489;stroke-dashoffset:28488;animation:uTAPOIEH_draw 8000ms ease-in-out 0ms forwards;}.uTAPOIEH_1{stroke-dasharray:82450 82452;stroke-dashoffset:82451;animation:uTAPOIEH_draw 8000ms ease-in-out 0ms forwards;}@keyframes uTAPOIEH_draw{100%{stroke-dashoffset:0;}}@keyframes uTAPOIEH_fade{0%{stroke-opacity:1;}96.72131147540983%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>

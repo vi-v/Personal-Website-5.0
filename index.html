@@ -103,8 +103,9 @@
                 </div>
             </div>
         </div>
-    	<div class="section">Some section</div>
-    	<div class="section">Some section</div>
+    	<div id="section3" class="section">
+            <h1>Contact Me</h1>
+        </div>
     </div>
 
     <!-- SCRIPTS -->
@@ -147,7 +148,8 @@
                         $('#section1-bg').show();
                     } else if(index === 2) {
                         $('#section1-bg').hide();
-                                                
+                        var randomId = new Date().getTime();
+                        $('#section2').addClass('jq-before');
                     }
 
             	}
