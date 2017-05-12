@@ -20,7 +20,7 @@
     	<div id="section1" class="section">
     	    <div class="container">
 
-                <div class="background-row visible-lg visible-md">
+                <div class="background-row visible-lg">
                     <div id="section1-bg">
                         <img id="section1-img" src="img/crane_animated.svg"></img>
                     </div>
@@ -55,45 +55,50 @@
 
     	<div id="section2" class="section">
             <div class="container">
-                <div class="row text-center">
-                    <h1>My Projects</h1>
-                </div>
 
-                <div class="row text-center">
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
+                <div class="row content-row">
+
+                    <div class="row text-center">
+                        <h1>My Projects</h1>
                     </div>
 
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
-                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
 
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
-                    </div>
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
 
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
-                    </div>
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
 
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
-                    </div>
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
 
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
-                    </div>
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
 
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
-                    </div>
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
 
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
-                    </div>
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
 
-                    <div class="col-sm-4">
-                        <div class="project-placeholder"></div>
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-6 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -129,21 +134,19 @@
             $('#fullpage').fullpage({
                 verticalCentered: true,
                 scrollOverflow: true,
-                navigation: true,
-                navigationPosition: 'left',
-                slidesNavigation: true,
                 afterLoad: function(anchorLink, index){
             		var loadedSection = $(this);
             		console.log('section '+index+' loaded');
+
+                    if(index === 2) {
+                        var bg2 = document.querySelectorAll('#section2-img');
+                        SVGInjector(bg2, injectorOptions);
+                    }
             	}
             });
 
             var injectorOptions = {
               evalScripts: 'once',
-              each: function (svg) {
-                // Callback after each SVG is injected
-                console.log('SVG injected: ' + svg.getAttribute('id'));
-              }
             };
 
             // Inject section 1 background
