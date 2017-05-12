@@ -131,17 +131,25 @@
     <!-- Custon javascript -->
     <script>
         $(document).ready(function() {
+            var started = false;
             $('#fullpage').fullpage({
                 verticalCentered: true,
                 scrollOverflow: true,
                 afterLoad: function(anchorLink, index){
             		var loadedSection = $(this);
-            		console.log('section '+index+' loaded');
+            		console.log("#section"+index+"-img");
 
-                    if(index === 2) {
-                        var bg2 = document.querySelectorAll('#section2-img');
-                        SVGInjector(bg2, injectorOptions);
+                    if(index === 1 && !started) {
+                        $('#section1-img').remove();
+                        $('#section1-bg').append('<img id="section1-img" src="img/crane_animated.svg"></img>');
+                        var bg1 = document.querySelectorAll('#section1-img');
+                        SVGInjector(bg1, injectorOptions);
+                        $('#section1-bg').show();
+                    } else if(index === 2) {
+                        $('#section1-bg').hide();
+                                                
                     }
+
             	}
             });
 
