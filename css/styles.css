@@ -66,17 +66,21 @@ a {
 }
 
 #section1-bg {
-    height: 100vh;
-    width: 100vw;
+    height: 300px;
+    width: 89vw;
     position: relative;
+    display: inline-block;
+    padding-bottom: 50%;
+    vertical-align: middle;
 }
 
-#section1-bg svg {
-    opacity: 0.1;
+#section1-bg svg, img, object {
+    opacity: 0.15;
     right: 0;
-    bottom: 0;
-    position: fixed;
-    height: 57%;
+    bottom: 15%;
+    display: block;
+    position: absolute;
+    height: 80%;
 }
 
 #section2 {

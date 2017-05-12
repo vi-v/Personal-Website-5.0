@@ -22,7 +22,7 @@
 
                 <div class="background-row visible-lg visible-md">
                     <div id="section1-bg">
-                        <svg id="section1-img" src="img/crane.svg"></svg>
+                        <img id="section1-img" src="img/crane_animated.svg"></img>
                     </div>
                 </div>
 
@@ -84,9 +84,20 @@
                 verticalCentered: true
             });
 
+            var injectorOptions = {
+              evalScripts: 'once',
+              each: function (svg) {
+                // Callback after each SVG is injected
+                console.log('SVG injected: ' + svg.getAttribute('id'));
+              }
+            };
+
             // Inject section 1 background
+
             var bg1 = document.querySelectorAll('#section1-img');
-            SVGInjector(bg1);
+            SVGInjector(bg1, injectorOptions, function() {
+
+            });
 
         });
     </script>
