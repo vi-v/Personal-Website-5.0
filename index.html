@@ -66,43 +66,8 @@
                         <h1>My Projects</h1>
                     </div>
 
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder well"></div>
-                        </div>
-
+                    <div id="projects-row" class="row">
+                        <!-- Place projects here -->
                     </div>
                 </div>
             </div>
@@ -179,6 +144,15 @@
 
             	}
             });
+
+            //TESTING
+            for(var i = 1; i<=9; i++) {
+                $('#projects-row').append(`
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
+                    `);
+            }
 
             var injectorOptions = {
               evalScripts: 'once',

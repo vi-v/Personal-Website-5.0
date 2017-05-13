@@ -127,17 +127,20 @@ a {
     position: relative;
     width: 320px;
     height: 200px;
-    border-radius: 20px !important;
+    border-radius: 5px;
     margin-bottom: 5%;
     display: inline-block;
     transition: all 200ms ease-in-out;
     -webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: white;
 }
 
 .project-placeholder:hover {
     /* background-color: rgba(0,77,64 ,1.0); */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 #section3 {
