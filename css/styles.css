@@ -88,7 +88,7 @@ a {
 }
 
 #section2 {
-    background-color: #ecf0f1;
+    background-color: #EEEEEE;
 
 }
 
@@ -121,7 +121,7 @@ a {
     position: relative;
     width: 320px;
     height: 200px;
-    border-radius: 7px;
+    border-radius: 20px !important;
     margin-bottom: 5%;
     display: inline-block;
     transition: all 200ms ease-in-out;
@@ -131,7 +131,7 @@ a {
 }
 
 .project-placeholder:hover {
-    background-color: rgba(0,77,64 ,1.0);
+    /* background-color: rgba(0,77,64 ,1.0); */
 }
 
 #section3 {
