@@ -56,6 +56,11 @@
     	</div>
 
     	<div id="section2" class="section">
+
+            <div class="background-row visible-lg">
+                <div id="section2-bg"></div>
+            </div>
+
             <div class="container">
 
                 <div class="row content-row">
@@ -65,39 +70,39 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
-                        <div class="col-sm-4 col-md-6 project-wrapper">
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
                             <div class="project-placeholder"></div>
                         </div>
 
@@ -142,6 +147,9 @@
             		var loadedSection = $(this);
             		console.log("#section"+index+"-img");
 
+                    $('#section1-bg').hide();
+                    $('#section2-bg').hide();
+
                     if(index === 1 && !started) {
                         $('#section1-img').remove();
                         $('#section1-bg').append('<img id="section1-img" src="img/crane_animated.svg"></img>');
@@ -149,9 +157,11 @@
                         SVGInjector(bg1, injectorOptions);
                         $('#section1-bg').show();
                     } else if(index === 2) {
-                        $('#section1-bg').hide();
-                        var randomId = new Date().getTime();
-                        $('#section2').addClass('jq-before');
+                        $('#section2-img').remove();
+                        $('#section2-bg').append('<img id="section2-img" src="img/ts_animated.svg"></img>');
+                        var bg2 = document.querySelectorAll('#section2-img');
+                        SVGInjector(bg2, injectorOptions);
+                        $('#section2-bg').show();
                     }
 
             	}

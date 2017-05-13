@@ -112,6 +112,33 @@ a {
 
 }
 
+#section2-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.08;
+    text-align: center;
+
+    /*
+    background-image: url('../img/ts_animated.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -ms-background-size: auto 75%;
+    -o-background-size: auto 75%;
+    -moz-background-size: auto 75%;
+    -webkit-background-size: auto 75%;
+    background-size: auto 75%;
+    */
+}
+
+#section2-bg svg, img, object {
+    vertical-align: middle;
+    opacity: 0.15;
+    display: inline-block;;
+    position: relative;;
+    height: 100%;
+}
+
 /*
 #section2:before{
     content: ' ';
