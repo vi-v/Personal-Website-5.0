@@ -26,8 +26,6 @@
                 <div id="section1-bg">
 
                 </div>
-
-                <div id="section1-gradient"></div>
             </div>
 
     	    <div class="container">
@@ -75,7 +73,13 @@
             </div>
         </div>
     	<div id="section3" class="section">
-            <h1>Contact Me</h1>
+            <div class="container">
+                <div class="row content-row">
+                    <div class="col-sm-12 well well-rounded">
+                        <h1>sah dude</h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -114,6 +118,7 @@
 
             if(mobilecheck()) {
                 $('#about-content').removeClass('well').removeClass('well-rounded');
+                $('#section2-bg').closest('div').remove();
             }
 
             var started = false;
@@ -131,13 +136,12 @@
                         $('body').css({
                             'background-color': '#26C6DA'
                         });
+                    } else if (nextIndex === 3) {
+                        //Transition to slide background-color
+                        $('body').css({
+                            'background-color': '#FFCA28'
+                        });
                     }
-                } else if (nextIndex === 3) {
-                    //Transition to slide background-color
-                    $('body').css({
-                        'background-color': '#26A69A'
-                    });
-                }
                 },
                 afterLoad: function(anchorLink, index){
             		var loadedSection = $(this);

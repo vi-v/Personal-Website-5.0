@@ -110,7 +110,7 @@ body {
 #section2-bg {
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: relative;;
     opacity: 0.2;
     text-align: center;
 }
@@ -153,7 +153,6 @@ body {
 }
 
 #section3 {
-    background-color: #263238;
 }
 
 #section3 h1 {
