@@ -73,26 +73,6 @@ a {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DCDFF5', endColorstr='#ecf0f1',GradientType=1 ); /* ie6-9 */
 }
 
-/* OLD
-#section1-bg {
-    margin-top: -10%;
-    width: 89vw;
-    display: inline-block;
-    position: relative;
-    padding-bottom: 50%;
-    vertical-align: top;
-}
-
-#section1-bg svg, img, object {
-    opacity: 0.15;
-    right: 0;
-    bottom: 0;
-    display: block;
-    position: absolute;
-    height: 80%;
-}
-*/
-
 #section1-bg {
     width: 100%;
     height: 100%;
@@ -118,17 +98,6 @@ a {
     position: fixed;
     opacity: 0.08;
     text-align: center;
-
-    /*
-    background-image: url('../img/ts_animated.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    -ms-background-size: auto 75%;
-    -o-background-size: auto 75%;
-    -moz-background-size: auto 75%;
-    -webkit-background-size: auto 75%;
-    background-size: auto 75%;
-    */
 }
 
 #section2-bg svg, img, object {
@@ -138,27 +107,6 @@ a {
     position: relative;;
     height: 100%;
 }
-
-/*
-#section2:before{
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.08;
-    background-image: url('../img/ts_animated.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    -ms-background-size: auto 75%;
-    -o-background-size: auto 75%;
-    -moz-background-size: auto 75%;
-    -webkit-background-size: auto 75%;
-    background-size: auto 75%;
-}
-*/
 
 #section2.jq-before:before{
     content: ' ';
