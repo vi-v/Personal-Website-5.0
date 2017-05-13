@@ -88,7 +88,7 @@ a {
 }
 
 #section2 {
-    background-color: #00796B;
+    background-color: #ecf0f1;
 
 }
 
@@ -96,39 +96,19 @@ a {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    opacity: 0.08;
+    opacity: 0.2;
     text-align: center;
 }
 
 #section2-bg svg, img, object {
     vertical-align: middle;
-    opacity: 0.15;
     display: inline-block;;
     position: relative;;
     height: 100%;
 }
 
-#section2.jq-before:before{
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.08;
-    background-image: url('../img/ts_animated.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    -ms-background-size: auto 75%;
-    -o-background-size: auto 75%;
-    -moz-background-size: auto 75%;
-    -webkit-background-size: auto 75%;
-    background-size: auto 75%;
-}
-
 #section2 h1 {
-    color: #ecf0f1;
+    color: #222222;
     font-size: 4.5em;
     padding-bottom: 2%;
 }

@@ -162,6 +162,9 @@
                         var bg2 = document.querySelectorAll('#section2-img');
                         SVGInjector(bg2, injectorOptions);
                         $('#section2-bg').show();
+                        setTimeout(function() {
+                            $('#section2-bg').animate({'opacity': '0.05'});
+                        },8000);
                     }
 
             	}
