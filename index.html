@@ -45,8 +45,8 @@
                             <div class="col-lg-1 visible-lg visible-md"></div>
 
                             <div class="text-center col-lg-4 col-sm-12" >
-                                <a class="btn btn-outline-black" style="margin-right: 20px;">Resume</a>
-                                <a class="btn btn-outline-black">GitHub</a>
+                                <a class="btn btn-raised btn-primary" style="margin-right: 20px;">Resume</a>
+                                <a class="btn btn-raised btn-primary">GitHub</a>
                             </div>
 
                         </div>
@@ -145,6 +145,8 @@
     <!-- Custon javascript -->
     <script>
         $(document).ready(function() {
+            $.material.init();
+
             var started = false;
             $('#fullpage').fullpage({
                 verticalCentered: true,
