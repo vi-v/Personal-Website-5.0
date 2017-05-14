@@ -159,6 +159,14 @@
                 </div>
             </div>
         </div>
+
+        <div id="section4" class="section">
+            <div class="container">
+                <div class="row content-row">
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- SCRIPTS -->
@@ -200,6 +208,8 @@
                 $('#section2-bg').closest('div').remove();
             }
 
+            //var currentBackgroundClass = 'gradient-blue-grey';
+            var currentBackgroundClass = 'red';
             var started = false;
             $('#fullpage').fullpage({
                 verticalCentered: true,
@@ -207,19 +217,32 @@
                 onLeave: function(index, nextIndex, direction) {
                     if(nextIndex === 1) {
                         //Transition to slide background-color
-                        $('body').css({
-                            'background-color': '#66BB6A'
-                        });
+                        $('body').removeClass(currentBackgroundClass);
+                        currentBackgroundClass = 'gradient-blue-grey';
+                        //currentBackgroundClass = 'red';
+                        $('body').addClass(currentBackgroundClass);
+
                     } else if (nextIndex === 2) {
                         //Transition to slide background-color
-                        $('body').css({
-                            'background-color': '#00BCD4'
-                        });
+                        $('body').removeClass(currentBackgroundClass);
+                        currentBackgroundClass = 'gradient-light-blue';
+                        //currentBackgroundClass = 'blue';
+                        $('body').addClass(currentBackgroundClass);
+
                     } else if (nextIndex === 3) {
                         //Transition to slide background-color
-                        $('body').css({
-                            'background-color': '#EEEEEE'
-                        });
+                        $('body').removeClass(currentBackgroundClass);
+                        currentBackgroundClass = 'gradient-grey';
+                        //currentBackgroundClass = 'green';
+                        $('body').addClass(currentBackgroundClass);
+
+                    } else if (nextIndex === 4) {
+                        //Transition to slide background-color
+                        $('body').removeClass(currentBackgroundClass);
+                        currentBackgroundClass = 'gradient-grey-purple';
+                        //currentBackgroundClass = 'green';
+                        $('body').addClass(currentBackgroundClass);
+
                     }
                 },
                 afterLoad: function(anchorLink, index){
