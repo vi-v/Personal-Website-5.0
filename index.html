@@ -20,6 +20,10 @@
 </head>
 <body>
 
+    <canvas id="gradient-canvas"></canvas>
+
+    </div>
+
     <div id="fullpage">
 
     	<div id="section1" class="section">
@@ -195,7 +199,10 @@
     <!-- SVG injector -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.0/vivus.min.js"></script>
-    <!-- vivus svg -->
+    <!-- Vivus SVG -->
+
+    <script src="js/granim.min.js"></script>
+    <!-- Granim -->
 
     <!-- Custon javascript -->
     <script>
@@ -208,6 +215,36 @@
                 $('#section2-bg').closest('div').remove();
             }
 
+            var granimInstance = new Granim({
+                element: '#gradient-canvas',
+                name: 'interactive-gradient',
+                direction: 'diagonal',
+                opacity: [1, 1],
+                isPausedWhenNotInView: true,
+                stateTransitionSpeed: 500,
+                states : {
+                    "default-state": {
+                        gradients: [
+                            ['#B3FFAB', '#12FFF7'],
+                            ['#ADD100', '#7B920A'],
+                            ['#1A2980', '#26D0CE']
+                        ],
+                        transitionSpeed: 10000
+                    },
+                    "violet-state": {
+                        gradients: [
+                            ['#9D50BB', '#6E48AA'],
+                            ['#4776E6', '#8E54E9']
+                        ],
+                        transitionSpeed: 2000
+                    },
+                    "orange-state": {
+                        gradients: [ ['#FF4E50', '#F9D423'] ],
+                        loop: false
+                    }
+                }
+            });
+
             //var currentBackgroundClass = 'gradient-blue-grey';
             var currentBackgroundClass = 'red';
             var started = false;
@@ -215,6 +252,7 @@
                 verticalCentered: true,
                 scrollOverflow: true,
                 onLeave: function(index, nextIndex, direction) {
+                    return;
                     if(nextIndex === 1) {
                         //Transition to slide background-color
                         $('body').removeClass(currentBackgroundClass);
@@ -247,7 +285,6 @@
                 },
                 afterLoad: function(anchorLink, index){
             		var loadedSection = $(this);
-            		console.log("#section"+index+"-img");
 
                     $('#section1-bg').hide();
                     $('#section2-bg').hide();
