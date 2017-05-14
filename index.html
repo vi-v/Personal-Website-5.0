@@ -34,9 +34,7 @@
     	<div id="section1" class="section">
 
             <div class="background-row visible-lg">
-                <div id="section1-bg">
-
-                </div>
+                <div id="section1-bg"></div>
             </div>
 
     	    <div class="container">
@@ -74,7 +72,7 @@
                 <div class="row content-row">
 
                     <div class="row text-center">
-                        <h1>My Projects</h1>
+                        <h1>Projects</h1>
                     </div>
 
                     <div id="projects-row" class="row">
@@ -173,6 +171,59 @@
             <div class="container">
                 <div class="row content-row">
 
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-6">
+                            <h1>Stuff</h1>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <form class="form-horizontal well">
+                              <fieldset>
+                                <legend>Write to me:</legend>
+
+                                <div class="form-group">
+                                  <label for="inputName" class="col-md-2 control-label">Name</label>
+
+                                  <div class="col-md-10">
+                                    <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="inputEmail" class="col-md-2 control-label">Email</label>
+
+                                  <div class="col-md-10">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Your Email">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="inputSubject" class="col-md-2 control-label">Subject</label>
+
+                                  <div class="col-md-10">
+                                    <input type="text" class="form-control" id="inputSubject" placeholder="Message Subject">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="textArea" class="col-md-2 control-label">Textarea</label>
+
+                                  <div class="col-md-10">
+                                    <textarea class="form-control" rows="3" id="textArea" placeholder="Your Message"></textarea>
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="col-md-10 col-md-offset-2 text-left">
+                                    <button type="submit" class="btn btn-primary">Submit <i class="fa fa-paper-plane right text-primary" aria-hidden="true"></i></button>
+                                  </div>
+                                </div>
+
+                              </fieldset>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -209,6 +260,7 @@
     <!-- Custon javascript -->
     <script>
         $(document).ready(function() {
+            var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'gradient-grey-purple'];
             $.material.init();
 
             if(mobilecheck()) {
@@ -217,7 +269,6 @@
                 $('#section2-bg').closest('div').remove();
             }
 
-            var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'gradient-grey-purple'];
             var started = false;
             $('#fullpage').fullpage({
                 verticalCentered: true,
