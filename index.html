@@ -20,7 +20,12 @@
 </head>
 <body>
 
-    <canvas id="gradient-canvas"></canvas>
+    <div id="gradient-canvas">
+        <div class="gradient-blue-grey"></div>
+        <div class="gradient-light-blue"></div>
+        <div class="gradient-grey"></div>
+        <div class="gradient-grey-purple"></div>
+    </div>
 
     </div>
 
@@ -201,9 +206,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.0/vivus.min.js"></script>
     <!-- Vivus SVG -->
 
-    <script src="js/granim.min.js"></script>
-    <!-- Granim -->
-
     <!-- Custon javascript -->
     <script>
         $(document).ready(function() {
@@ -215,73 +217,16 @@
                 $('#section2-bg').closest('div').remove();
             }
 
-            var granimInstance = new Granim({
-                element: '#gradient-canvas',
-                name: 'interactive-gradient',
-                direction: 'diagonal',
-                opacity: [1, 1],
-                isPausedWhenNotInView: true,
-                stateTransitionSpeed: 500,
-                states : {
-                    "default-state": {
-                        gradients: [
-                            ['#B3FFAB', '#12FFF7'],
-                            ['#ADD100', '#7B920A'],
-                            ['#1A2980', '#26D0CE']
-                        ],
-                        transitionSpeed: 10000
-                    },
-                    "violet-state": {
-                        gradients: [
-                            ['#9D50BB', '#6E48AA'],
-                            ['#4776E6', '#8E54E9']
-                        ],
-                        transitionSpeed: 2000
-                    },
-                    "orange-state": {
-                        gradients: [ ['#FF4E50', '#F9D423'] ],
-                        loop: false
-                    }
-                }
-            });
-
-            //var currentBackgroundClass = 'gradient-blue-grey';
-            var currentBackgroundClass = 'red';
+            var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'gradient-grey-purple'];
             var started = false;
             $('#fullpage').fullpage({
                 verticalCentered: true,
                 scrollOverflow: true,
                 onLeave: function(index, nextIndex, direction) {
-                    return;
-                    if(nextIndex === 1) {
-                        //Transition to slide background-color
-                        $('body').removeClass(currentBackgroundClass);
-                        currentBackgroundClass = 'gradient-blue-grey';
-                        //currentBackgroundClass = 'red';
-                        $('body').addClass(currentBackgroundClass);
 
-                    } else if (nextIndex === 2) {
-                        //Transition to slide background-color
-                        $('body').removeClass(currentBackgroundClass);
-                        currentBackgroundClass = 'gradient-light-blue';
-                        //currentBackgroundClass = 'blue';
-                        $('body').addClass(currentBackgroundClass);
+                    $('.'+gradient_classes[index-1]).css('opacity', 0);
+                    $('.'+gradient_classes[nextIndex-1]).css('opacity', 1);
 
-                    } else if (nextIndex === 3) {
-                        //Transition to slide background-color
-                        $('body').removeClass(currentBackgroundClass);
-                        currentBackgroundClass = 'gradient-grey';
-                        //currentBackgroundClass = 'green';
-                        $('body').addClass(currentBackgroundClass);
-
-                    } else if (nextIndex === 4) {
-                        //Transition to slide background-color
-                        $('body').removeClass(currentBackgroundClass);
-                        currentBackgroundClass = 'gradient-grey-purple';
-                        //currentBackgroundClass = 'green';
-                        $('body').addClass(currentBackgroundClass);
-
-                    }
                 },
                 afterLoad: function(anchorLink, index){
             		var loadedSection = $(this);

@@ -31,10 +31,20 @@ body {
     height: 100%;
     width: 100%;
     z-index: -9999;
-    background-color: teal;
+}
+
+#gradient-canvas div{
+    height: 100%;
+    width: 100%;
+    transition: all 700ms ease-in-out;
+    -webkit-transition: all 700ms ease-in-out;
+    -moz-transition: all 700ms ease-in-out;
+    -o-transition: all 700ms ease-in-out;
 }
 
 .gradient-blue-grey {
+    opacity: 1;
+    position: fixed;
     background: -moz-linear-gradient(335deg, rgba(220,223,245,1) 0%, rgba(236,240,241,1) 100%);
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(220,223,245,1)), color-stop(100%, rgba(236,240,241,1)));
     background: -webkit-linear-gradient(335deg, rgba(220,223,245,1) 0%, rgba(236,240,241,1) 100%);
@@ -45,6 +55,8 @@ body {
 }
 
 .gradient-light-blue {
+    opacity: 0.0;
+    position: fixed;
     background: -moz-linear-gradient(335deg, rgba(0,188,212, 1) 0%, rgba(0,188,212, 1) 100%);
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,188,212, 1)), color-stop(100%, rgba(0,188,212, 1)));
     background: -webkit-linear-gradient(335deg, rgba(0,188,212, 1) 0%, rgba(0,188,212, 1) 100%);
@@ -55,6 +67,8 @@ body {
 }
 
 .gradient-grey {
+    opacity: 0.0;
+    position: fixed;
     background: -moz-linear-gradient(335deg, rgba(238,238,238, 1) 0%, rgba(238,238,238, 1) 100%);
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(238,238,238, 1)), color-stop(100%, rgba(238,238,238, 1)));
     background: -webkit-linear-gradient(335deg, rgba(238,238,238, 1) 0%, rgba(238,238,238, 1) 100%);
@@ -65,6 +79,8 @@ body {
 }
 
 .gradient-grey-purple {
+    opacity: 0.0;
+    position: fixed;
     background: linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 30%,#EEEEEE 70%,#3F51B5 70%,#3F51B5 100%); /* W3C */
 }
 
