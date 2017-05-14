@@ -24,7 +24,6 @@
         <div class="gradient-blue-grey"></div>
         <div class="gradient-light-blue"></div>
         <div class="gradient-grey"></div>
-        <div class="gradient-grey-purple"></div>
     </div>
 
     </div>
@@ -40,32 +39,6 @@
     	    <div class="container">
 
                 <div class="row content-row">
-
-                    <div class="row">
-						<div class = "col-m-2 col-lg-2">
-							<a href="https://github.com/vvijayan-dev" target="_blank" type="button" class="btn btn-raised btn-unique"><i class="fa fa-github left"></i> Github</a>
-						</div>
-
-						<div class = "col-m-2 col-lg-2">
-							<a href="https://www.facebook.com/vishnu.vijayan.106" target="_blank" type="button" class="btn btn-raised btn-fb"><i class="fa fa-facebook left"></i> Facebook</a>
-						</div>
-
-						<div class = "col-m-2 col-lg-2">
-							<a href = "https://www.youtube.com/channel/UCd61HBrtQBlCRXahkcJMykw" target="_blank" type="button" class="btn btn-raised btn-danger"><i class="fa fa-youtube left"></i> Youtube</a>
-						</div>
-
-						<div class = "col-m-2 col-lg-2">
-							<a href="mailto:slpxatwon@gmail.com?Subject=Hi%20Vishnu" target="_top" type="button" class="btn btn-raised btn-amber"><i class="fa fa-envelope left"></i> Email</a>
-						</div>
-
-						<div class = "col-m-2 col-lg-2">
-							<a href="https://www.linkedin.com/in/vishnu-vijayan-316625133" target="_blank" type="button" class="btn btn-raised btn-primary"><i class="fa fa-linkedin left"></i> Linkedin</a>
-						</div>
-
-						<div class = "col-m-2 col-lg-2">
-							<a href="/resume-min.pdf" target="_blank" type="button" class="btn btn-raised btn-info"><i class="fa fa-envelope left"></i> Resume</a>
-						</div>
-					</div>
 
                     <div id="about-content" class="col-sm-12 col-lg-10 well well-rounded text-center">
                         <h1 class="name">Vishnu Vijayan</h1>
@@ -193,16 +166,16 @@
             </div>
         </div>
 
-        <div id="section4" class="section">
+        <div id="section4" class="section gradient-grey-purple">
             <div class="container">
                 <div class="row content-row">
 
                     <div class="row text-center">
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-lg-6" style="margin-bottom: 15px;">
                             <h1>Come, let's build the future together</h1>
                         </div>
 
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-lg-6">
                             <form class="form-horizontal well">
                               <fieldset>
                                 <legend>Write to me:</legend>
@@ -250,7 +223,31 @@
                         </div>
                     </div>
 
+                    <div class="row text-center" style="margin-top: 20px;">
+                        <div class = "col-sm-6 col-md-3 col-lg-2">
+                            <a href="https://github.com/vi-v" target="_blank" type="button" class="btn btn-raised btn-unique"><i class="fa fa-github left"></i> Github</a>
+                        </div>
 
+                        <div class = "col-sm-6 col-md-3 col-lg-2">
+                            <a href="https://www.facebook.com/vishnu.vijayan.106" target="_blank" type="button" class="btn btn-raised btn-fb"><i class="fa fa-facebook left"></i> Facebook</a>
+                        </div>
+
+                        <div class = "col-sm-6 col-md-3 col-lg-2">
+                            <a href = "https://www.youtube.com/channel/UCd61HBrtQBlCRXahkcJMykw" target="_blank" type="button" class="btn btn-raised btn-danger"><i class="fa fa-youtube left white"></i> Youtube</a>
+                        </div>
+
+                        <div class = "col-sm-6 col-md-3 col-lg-2">
+                            <a href="mailto:slpxatwon@gmail.com?Subject=Hi%20Vishnu" target="_top" type="button" class="btn btn-raised btn-amber"><i class="fa fa-envelope left"></i> Email</a>
+                        </div>
+
+                        <div class = "col-sm-6 col-md-3 col-lg-2">
+                            <a href="https://www.linkedin.com/in/vishnu-vijayan-316625133" target="_blank" type="button" class="btn btn-raised btn-primary"><i class="fa fa-linkedin left white"></i> Linkedin</a>
+                        </div>
+
+                        <div class = "col-sm-6 col-md-3 col-lg-2">
+                            <a href="/resume-min.pdf" target="_blank" type="button" class="btn btn-raised btn-info"><i class="fa fa-envelope left white"></i> Resume</a>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -288,7 +285,7 @@
     <!-- Custon javascript -->
     <script>
         $(document).ready(function() {
-            var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'gradient-grey-purple'];
+            var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'skip'];
             $.material.init();
 
             if(mobilecheck()) {
@@ -296,6 +293,7 @@
                 $('#skills-container').removeClass('well').removeClass('well-rounded');
                 $('#section2-bg').closest('div').remove();
                 $('.text-left').removeClass('.text-left').addClass('text-right');
+                $('#section4').removeClass('gradient-grey-purple').addClass('gradient-grey-purple-mob');
             }
 
             var started = false;

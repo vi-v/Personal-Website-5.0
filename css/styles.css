@@ -38,13 +38,7 @@ a, btn {
 .gradient-light-blue {
     opacity: 0.0;
     position: fixed;
-    background: -moz-linear-gradient(335deg, rgba(0,188,212, 1) 0%, rgba(0,188,212, 1) 100%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,188,212, 1)), color-stop(100%, rgba(0,188,212, 1)));
-    background: -webkit-linear-gradient(335deg, rgba(0,188,212, 1) 0%, rgba(0,188,212, 1) 100%);
-    background: -o-linear-gradient(335deg, rgba(0,188,212, 1) 0%, rgba(0,188,212, 1) 100%);
-    background: -ms-linear-gradient(335deg, rgba(0,188,212, 1) 0%, rgba(0,188,212, 1) 100%);
-    background: linear-gradient(115deg, rgba(0,188,212, 1) 0%, rgba(0,188,212, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DCDFF5', endColorstr='#ecf0f1',GradientType=1 );
+    background-color: #3F51B5;
 }
 
 .gradient-grey {
@@ -60,9 +54,13 @@ a, btn {
 }
 
 .gradient-grey-purple {
-    opacity: 0.0;
-    position: fixed;
+    opacity: 1.0;
     background: linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%); /* W3C */
+}
+
+.gradient-grey-purple-mob {
+    opacity: 1.0;
+    background: linear-gradient(to top, #3F51B5 0%,#3F51B5 30%,#3F51B5 70%,#EEEEEE 70%,#EEEEEE 100%); /* W3C */
 }
 
 .white {
@@ -257,5 +255,39 @@ a, btn {
 
 .btn-unique {
     background-color: black !important;
-    color: white;
+    color: white !important;
+}
+
+.btn-unique:hover {
+    background-color: #212121 !important;
+}
+
+.btn-unique i {
+    color: white !important;
+}
+
+.btn-fb {
+    background-color: #3b5999 !important;
+    color: white !important;
+}
+
+.btn-fb:hover {
+    background-color: #4866A6 !important;
+}
+
+.btn-fb i {
+    color: white !important;
+}
+
+.btn-amber {
+    background-color: #FFC107 !important;
+    color: white !important;
+}
+
+.btn-amber:hover {
+    background-color: #FFCA28 !important;
+}
+
+.btn-amber i {
+    color: white !important;
 }
