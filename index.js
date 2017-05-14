@@ -23,7 +23,7 @@ app.post('/logmessage', function(req, res) {
 	console.log("Logging: "+text);
 	var dt = dateTime.create();
 	var formatted = dt.format('m-d-Y');
-	var dir = 'messages/'+formatted;
+	var dir = './messages/'+formatted;
 	if(!fs.existsSync(dir)) {
 		fs.mkdirSync(dir);
 	}
