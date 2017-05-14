@@ -14,6 +14,11 @@ app.use('/scripts', express.static(__dirname + '/node_modules/'));
 
 server.listen(port);
 
+if(!fs.existsSync('messages')) {
+	console.log('Making directory: messages');
+	fs.mkdirSync('messages');
+}
+
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/index.html');
 });
@@ -23,7 +28,7 @@ app.post('/logmessage', function(req, res) {
 	console.log("Logging: "+text);
 	var dt = dateTime.create();
 	var formatted = dt.format('m-d-Y');
-	var dir = './messages/'+formatted;
+	var dir = 'messages/'+formatted;
 	if(!fs.existsSync(dir)) {
 		fs.mkdirSync(dir);
 	}
