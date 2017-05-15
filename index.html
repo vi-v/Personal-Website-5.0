@@ -290,6 +290,7 @@
     <!-- Custon javascript -->
     <script>
         $(document).ready(function() {
+
             var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'skip'];
             var mobile_colors = ['#DCDFF5', '#3F51B5', '#EEEEEE', '#3F51B5'];
             $.material.init();
@@ -300,6 +301,15 @@
                 $('#section2-bg').closest('div').remove();
                 $('.text-left').removeClass('.text-left').addClass('text-right');
                 $('#section4').removeClass('gradient-grey-purple').addClass('gradient-grey-purple-mob');
+            }
+
+            //TESTING
+            for(var i = 1; i<=9; i++) {
+                $('#projects-row').append(`
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
+                    `);
             }
 
             var started = false;
@@ -339,15 +349,6 @@
 
             	}
             });
-
-            //TESTING
-            for(var i = 1; i<=9; i++) {
-                $('#projects-row').append(`
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder"></div>
-                        </div>
-                    `);
-            }
 
             var injectorOptions = {
               evalScripts: 'once',
