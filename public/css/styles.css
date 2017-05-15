@@ -63,11 +63,15 @@ a, btn {
 .gradient-grey-purple {
     opacity: 1.0;
     background: linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%); /* W3C */
+    background: -moz-linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
+    background: -webkit-linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
+    background: -o-linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
+    background: -ms-linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
 }
 
 .gradient-grey-purple-mob {
     opacity: 1.0;
-    background: linear-gradient(to top, #3F51B5 0%,#3F51B5 30%,#3F51B5 70%,#EEEEEE 70%,#EEEEEE 100%); /* W3C */
+    background: #3F51B5;
 }
 
 .white {
