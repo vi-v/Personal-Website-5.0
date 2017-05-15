@@ -23,6 +23,13 @@ a, btn {
     -o-transition: all 700ms ease-in-out;
 }
 
+.mobile-browser-color {
+    transition: all 700ms ease-in-out;
+    -webkit-transition: all 700ms ease-in-out;
+    -moz-transition: all 700ms ease-in-out;
+    -o-transition: all 700ms ease-in-out;
+}
+
 .gradient-blue-grey {
     opacity: 1;
     position: fixed;

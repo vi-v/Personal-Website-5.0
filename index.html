@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="apple-mobile-web-app-status-bar-style" content="#cb2d3e">
-    <meta name="msapplication-navbutton-color" content="#cb2d3e">
-    <meta name="theme-color" content="#cb2d3e">
+    <meta class="mobile-browser-color" name="apple-mobile-web-app-status-bar-style" content="#DCDFF5">
+    <meta class="mobile-browser-color" name="msapplication-navbutton-color" content="#DCDFF5">
+    <meta class="mobile-browser-color" name="theme-color" content="#DCDFF5">
 
     <title>Vishnu Vijayan</title>
 
@@ -291,6 +291,7 @@
     <script>
         $(document).ready(function() {
             var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'skip'];
+            var mobile_colors = ['#DCDFF5', '#3F51B5', '#EEEEEE', '#3F51B5'];
             $.material.init();
 
             if(mobilecheck()) {
@@ -307,6 +308,7 @@
                 scrollOverflow: true,
                 onLeave: function(index, nextIndex, direction) {
 
+                    $('.mobile-browser-color').attr('content', mobile_colors[nextIndex-1])
                     $('.'+gradient_classes[index-1]).css('opacity', 0);
                     $('.'+gradient_classes[nextIndex-1]).css('opacity', 1);
 
