@@ -25,6 +25,14 @@
 </head>
 <body>
 
+    <div id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+    </div>
+
     <div id="gradient-canvas">
         <div class="gradient-blue-grey"></div>
         <div class="gradient-light-blue"></div>
@@ -290,6 +298,7 @@
     <!-- Custon javascript -->
     <script>
         $(document).ready(function() {
+            $('#preload').remove();
 
             //TESTING
             for(var i = 1; i<=9; i++) {
