@@ -62,11 +62,12 @@ a, btn {
 
 .gradient-grey-purple {
     opacity: 1.0;
-    background: linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%); /* W3C */
+    background: linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
     background: -moz-linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
     background: -webkit-linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
     background: -o-linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
     background: -ms-linear-gradient(to bottom, #EEEEEE 0%,#EEEEEE 40%,#EEEEEE 60%,#3F51B5 60%,#3F51B5 100%);
+
 }
 
 .gradient-grey-purple-mob {
@@ -113,7 +114,7 @@ a, btn {
 
 .about-me {
     font-weight: 300;
-    font-size: 25px;
+    font-size: 21px;
 }
 
 .btn-outline-black:hover {
@@ -184,6 +185,13 @@ a, btn {
     -o-transition: all 200ms ease-in-out;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     background-color: white;
+    transform:scale(0);
+    transform-origin:center center;
+    transition: transform 500ms ease;
+}
+
+.show{
+   transform:scale(1);
 }
 
 .project-placeholder:hover {

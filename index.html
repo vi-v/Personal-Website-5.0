@@ -48,10 +48,10 @@
                     <div id="about-content" class="col-sm-12 col-lg-10 well well-rounded text-center">
                         <h1 class="name">Vishnu Vijayan</h1>
                         <h1>Web Developer | Software Engineer | Music Producer</h1>
-                        <p class="about-me">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a
-                            type specimen book.
+                        <p class="about-me">Hello! My name is Vishnu Vijayan and I'm currently a sophomore at Purdue University. I love
+                            making applications that have a positive impact on peoples' daily lives. The majority of my skills are self-taught,
+                            and I am able to learn new things very quickly. I am a practitioner of the concepts of minimalism and zen, both of which can be seen in my work.
+                            I currently work as a software developer for the Purdue University Cognition and Learning Laboratory.
                         </p>
 
                         <div class="row" style="padding-top: 10px;">
@@ -303,6 +303,8 @@
                 $('#section4').removeClass('gradient-grey-purple').addClass('gradient-grey-purple-mob');
             }
 
+            $('#send-button').prop('disabled', 'true');
+
             //TESTING
             for(var i = 1; i<=9; i++) {
                 $('#projects-row').append(`
@@ -321,6 +323,8 @@
                     $('.mobile-browser-color').attr('content', mobile_colors[nextIndex-1])
                     $('.'+gradient_classes[index-1]).css('opacity', 0);
                     $('.'+gradient_classes[nextIndex-1]).css('opacity', 1);
+
+                    if(nextIndex == 2) $('.project-placeholder').addClass('show');
 
                 },
                 afterLoad: function(anchorLink, index){
@@ -343,7 +347,7 @@
                         SVGInjector(bg2, injectorOptions);
                         $('#section2-bg').show();
                         setTimeout(function() {
-                            $('#section2-bg').animate({'opacity': '0.03'});
+                            $('#section2-bg').animate({'opacity': '0.1'});
                         },8000);
                     }
 
@@ -358,6 +362,19 @@
 
             var bg1 = document.querySelectorAll('#section1-img');
             SVGInjector(bg1, injectorOptions);
+
+            function expand(el_name) {
+
+                var el_height = $(el_name).height();
+                var el_width = $(el_name).width();
+
+                $(el_name).height(0).width(0);
+
+                $(el_name).animate({
+                    'height': el_height,
+                    'width:': el_width
+                }, 1000);
+            }
 
             /* FORM HANDLING */
 
