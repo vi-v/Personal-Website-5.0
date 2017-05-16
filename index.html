@@ -47,14 +47,14 @@
 
                     <div id="about-content" class="col-sm-12 col-lg-10 well well-rounded text-center">
                         <h1 class="name">Vishnu Vijayan</h1>
-                        <h1>Web Developer | Software Engineer | Music Producer</h1>
+                        <h1 id="occ">Web Developer | Software Engineer | Music Producer</h1>
                         <p class="about-me">Hello! My name is Vishnu Vijayan and I'm currently a sophomore at Purdue University. I love
                             making applications that have a positive impact on peoples' daily lives. The majority of my skills are self-taught,
                             and I am able to learn new things very quickly. I am a practitioner of the concepts of minimalism and zen, both of which can be seen in my work.
                             I currently work as a software developer for the Purdue University Cognition and Learning Laboratory.
                         </p>
 
-                        <div class="row" style="padding-top: 10px;">
+                        <div id="about-buttons" class="row" style="padding-top: 10px;">
                             <a class="btn btn-raised btn-primary" style="margin-right: 20px;">Resume <i class="fa fa-file white" aria-hidden="true"></i></a>
                             <a class="btn btn-raised btn-primary">GitHub <i class="fa fa-github white" aria-hidden="true"></i></a>
                         </div>
@@ -79,7 +79,7 @@
                         <h1>Projects</h1>
                     </div>
 
-                    <div id="projects-row" class="row">
+                    <div id="projects-row" class="row text-center">
                         <!-- Place projects here -->
                     </div>
                 </div>
@@ -291,6 +291,15 @@
     <script>
         $(document).ready(function() {
 
+            //TESTING
+            for(var i = 1; i<=9; i++) {
+                $('#projects-row').append(`
+                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
+                            <div class="project-placeholder"></div>
+                        </div>
+                    `);
+            }
+
             var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'skip'];
             var mobile_colors = ['#DCDFF5', '#3F51B5', '#EEEEEE', '#3F51B5'];
             $.material.init();
@@ -302,17 +311,21 @@
                 $('.text-left').removeClass('.text-left').addClass('text-right');
                 $('#section4').removeClass('gradient-grey-purple').addClass('gradient-grey-purple-mob');
             }
+            else {
+                console.log('not mobile')
+                $('.project-placeholder').addClass('prime-grow');
+            }
+
+            $('.name').animate({'opacity': '1', 'padding-top': '0'}, 500, function() {
+                $('#occ').animate({'opacity': '1', 'padding-top': '0'}, 500, function() {
+                    $('.about-me').animate({'opacity': '1', 'padding-top': '0'}, 500, function() {
+                        $('#about-buttons').animate({'opacity': '1', 'padding-top': '0'}, 500);
+                    });
+                });
+            });
 
             $('#send-button').prop('disabled', 'true');
 
-            //TESTING
-            for(var i = 1; i<=9; i++) {
-                $('#projects-row').append(`
-                        <div class="col-sm-12 col-md-6 col-lg-4 project-wrapper">
-                            <div class="project-placeholder"></div>
-                        </div>
-                    `);
-            }
 
             var started = false;
             $('#fullpage').fullpage({
@@ -324,7 +337,7 @@
                     $('.'+gradient_classes[index-1]).css('opacity', 0);
                     $('.'+gradient_classes[nextIndex-1]).css('opacity', 1);
 
-                    if(nextIndex == 2) $('.project-placeholder').addClass('show');
+                    if(nextIndex == 2) $('.project-placeholder').addClass('grow');
 
                 },
                 afterLoad: function(anchorLink, index){
