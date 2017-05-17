@@ -13,7 +13,7 @@
     var is_iPad = navigator.userAgent.match(/iPad/i) != null;
     var bgcolors = ['#00695C', '#3F51B5', '#EEEEEE', '#EEEEEE']
     var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'skip'];
-    var mobile_colors = ['#DCDFF5', '#3F51B5', '#EEEEEE', '#3F51B5'];
+    var mobile_colors = ['#004D40', '#3F51B5', '#EEEEEE', '#3F51B5'];
     $.material.init();
 
     if(mobilecheck() || is_iPad) {
@@ -50,6 +50,7 @@
 
     $('#send-button').prop('disabled', 'true');
     $('body').css('background-color', bgcolors[0]);
+    $('.mobile-browser-color').attr('content', mobile_colors[0]);
 
     $('#contact-page-container').toggleClass('contact-page-expand');
     var started = false;
@@ -58,7 +59,7 @@
         scrollOverflow: true,
         onLeave: function(index, nextIndex, direction) {
 
-            $('.mobile-browser-color').attr('content', mobile_colors[nextIndex-1])
+            $('.mobile-browser-color').attr('content', mobile_colors[nextIndex-1]);
             $('.'+gradient_classes[index-1]).css('opacity', 0);
             $('.'+gradient_classes[nextIndex-1]).css('opacity', 1);
             $('body').css('background-color', bgcolors[nextIndex-1]);
