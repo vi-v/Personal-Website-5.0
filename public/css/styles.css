@@ -10,7 +10,7 @@ body {
     -o-transition: all 700ms ease-in-out;
 }
 
-a, btn {
+a, btn, button {
   text-decoration: none;
 }
 
@@ -146,6 +146,39 @@ a, btn {
 .name {
     font-family: 'Julius Sans One', sans-serif !important;
     font-size: 4em;
+}
+
+#button-up {
+    position: fixed;
+    z-index: 9000;
+    left: calc(50vw - 28px);
+    left: -o-calc(50vw - 28px);
+    left: -webkit-calc(50vw - 28px);
+    left: -moz-calc(50vw - 28px);
+    top: 10px;
+}
+
+#button-down {
+    position: fixed;
+    z-index: 9000;
+    left: calc(50vw - 28px);
+    left: -o-calc(50vw - 28px);
+    left: -webkit-calc(50vw - 28px);
+    left: -moz-calc(50vw - 28px);
+    bottom: 10px;
+}
+
+.mob-down-arrow {
+    color: #222222;
+    display: block;
+}
+
+.mob-down-arrow i {
+    font-size: 3em;
+    transform:scale(1.5,1);
+    -webkit-transform:scale(1.5,1);
+    height: 10%;
+    max-height: 60px;
 }
 
 #section1-bg {

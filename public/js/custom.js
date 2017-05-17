@@ -1,4 +1,4 @@
-$(document).ready(function() {
+(function($){
     $('#preload').remove();
 
     //TESTING
@@ -10,21 +10,25 @@ $(document).ready(function() {
             `);
     }
 
+    var is_iPad = navigator.userAgent.match(/iPad/i) != null;
     var bgcolors = ['#00695C', '#3F51B5', '#EEEEEE', '#EEEEEE']
     var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'skip'];
     var mobile_colors = ['#DCDFF5', '#3F51B5', '#EEEEEE', '#3F51B5'];
     $.material.init();
 
-    if(mobilecheck()) {
+    if(mobilecheck() || is_iPad) {
         $('#about-content').removeClass('well').removeClass('well-rounded').removeClass('well-teal');
         $('#skills-container').removeClass('well').removeClass('well-rounded');
         $('#section2-bg').closest('div').remove();
         $('.text-left').removeClass('.text-left').addClass('text-right');
         $('#section4').removeClass('gradient-grey-purple').addClass('gradient-grey-purple-mob');
+        $('#button-up').remove();
+        $('#button-down').remove();
     }
     else {
         console.log('not mobile')
         $('.project-placeholder').addClass('prime-grow');
+        $('.mob-down-arrow').remove();
     }
 
     $('.name').animate({'opacity': '1', 'padding-top': '0'}, 500, function() {
@@ -33,6 +37,15 @@ $(document).ready(function() {
                 $('#about-buttons').animate({'opacity': '1', 'padding-top': '0'}, 500);
             });
         });
+    });
+
+    $('#button-up').hide();
+    $('#button-up').on('click', function() {
+        $.fn.fullpage.moveSectionUp();
+    });
+
+    $('#button-down').on('click', function() {
+        $.fn.fullpage.moveSectionDown();
     });
 
     $('#send-button').prop('disabled', 'true');
@@ -52,6 +65,14 @@ $(document).ready(function() {
 
             if(nextIndex == 2) $('.project-placeholder').addClass('grow');
             if(nextIndex == 4 || index == 4) $('#contact-page-container').toggleClass('contact-page-contract');
+
+            //Button fading
+            if(nextIndex == 1) $('#button-up').delay(700).fadeOut(200);
+            else if (nextIndex == 4) $('#button-down').delay(700).fadeOut(200);
+            else {
+                $('#button-up').delay(700).fadeIn(200);
+                $('#button-down').delay(700).fadeIn(200);
+            }
 
         },
         afterLoad: function(anchorLink, index){
@@ -174,4 +195,4 @@ $(document).ready(function() {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     }
-});
+})(jQuery);
