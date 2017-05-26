@@ -10,14 +10,15 @@
             `);
     }
 
+    //The last color in the array is skipped because the final section has it's own background
     var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-    var bgcolors = ['#00695C', '#3F51B5', '#EEEEEE', '#EEEEEE']
+    var bgcolors = ['#00BCD4', '#3F51B5', '#EEEEEE', '#EEEEEE']
     var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'skip'];
-    var mobile_colors = ['#004D40', '#3F51B5', '#EEEEEE', '#3F51B5'];
+    var mobile_colors = ['#00BCD4', '#3F51B5', '#EEEEEE', '#3F51B5'];
     $.material.init();
 
     if(mobilecheck() || is_iPad) {
-        $('#about-content').removeClass('well').removeClass('well-rounded').removeClass('well-teal');
+        $('#about-content').removeClass('well').removeClass('well-rounded').removeClass('well-cyan');
         $('#skills-container').removeClass('well').removeClass('well-rounded');
         $('#section2-bg').closest('div').remove();
         $('.text-left').removeClass('.text-left').addClass('text-right');

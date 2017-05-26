@@ -46,13 +46,7 @@ a, btn, button {
 .gradient-blue-grey {
     opacity: 1;
     position: fixed;
-    background: -moz-linear-gradient(315deg, rgba(0,105,92,1) 0%, rgba(0,121,107,1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,105,92,1)), color-stop(100%, rgba(0,121,107,1))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(315deg, rgba(0,105,92,1) 0%, rgba(0,121,107,1) 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(315deg, rgba(0,105,92,1) 0%, rgba(0,121,107,1) 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(315deg, rgba(0,105,92,1) 0%, rgba(0,121,107,1) 100%); /* ie10+ */
-    background: linear-gradient(135deg, rgba(0,105,92,1) 0%, rgba(0,121,107,1) 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00695C', endColorstr='#00796B',GradientType=1 ); /* ie6-9 */
+    background: #00BCD4;
 }
 
 .gradient-light-blue {
@@ -110,6 +104,10 @@ a, btn, button {
 
 .well-teal {
     background-color: #004D40 !important;
+}
+
+.well-cyan {
+    background-color: #00838F !important;
 }
 
 .background-row {
