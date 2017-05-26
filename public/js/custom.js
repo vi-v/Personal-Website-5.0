@@ -12,9 +12,9 @@
 
     //The last color in the array is skipped because the final section has it's own background
     var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-    var bgcolors = ['#00BCD4', '#3F51B5', '#EEEEEE', '#EEEEEE']
+    var bgcolors = ['#00BCD4', '#009688', '#EEEEEE', '#EEEEEE']
     var gradient_classes = ['gradient-blue-grey', 'gradient-light-blue', 'gradient-grey', 'skip'];
-    var mobile_colors = ['#00BCD4', '#3F51B5', '#EEEEEE', '#3F51B5'];
+    var mobile_colors = ['#00BCD4', '#009688', '#EEEEEE', '#3F51B5'];
     $.material.init();
 
     if(mobilecheck() || is_iPad) {
